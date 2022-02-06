@@ -1,13 +1,14 @@
 {
   "files": {
-    "main.css": "/static/css/main.d6e90293.css",
-    "main.js": "/static/js/main.82bf11aa.js",
-    "index.html": "/index.html",
-    "main.d6e90293.css.map": "/static/css/main.d6e90293.css.map",
-    "main.82bf11aa.js.map": "/static/js/main.82bf11aa.js.map"
+    "main.css": "/mui-notes/static/css/main.d6e90293.css",
+    "main.js": "/mui-notes/static/js/main.40c97bd3.js",
+    "static/media/harryPotter.jpg": "/mui-notes/static/media/harryPotter.83a6640dfbe70a58d4ea.jpg",
+    "index.html": "/mui-notes/index.html",
+    "main.d6e90293.css.map": "/mui-notes/static/css/main.d6e90293.css.map",
+    "main.40c97bd3.js.map": "/mui-notes/static/js/main.40c97bd3.js.map"
   },
   "entrypoints": [
     "static/css/main.d6e90293.css",
-    "static/js/main.82bf11aa.js"
+    "static/js/main.40c97bd3.js"
   ]
 }
