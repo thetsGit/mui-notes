@@ -10,7 +10,7 @@ import RadioGroup from "@material-ui/core/RadioGroup";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 import FormControl from "@material-ui/core/FormControl";
 import FormLabel from "@material-ui/core/FormLabel";
-import axios from "axios";
+// import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
 const useStyles = makeStyles({
@@ -32,7 +32,7 @@ const useStyles = makeStyles({
   },
 });
 
-const Create = () => {
+const Create = ({ notes, setNotes }) => {
   const [title, setTitle] = useState("");
   const [details, setDetails] = useState("");
   const [titleError, setTitleError] = useState(false);
@@ -46,9 +46,13 @@ const Create = () => {
     details ? setDetailsError(false) : setDetailsError(true);
 
     if (title && details) {
-      axios
-        .post("http://localhost:3001/notes", { title, details, category })
-        .then((res) => navigate("/"));
+      // axios
+      //   .post("http://localhost:3001/notes", { title, details, category })
+      //   .then((res) => navigate("/"));
+      const id = Math.floor(Math.random() * 10000);
+      const newNotes = [...notes, { id, title, details, category }];
+      setNotes(newNotes);
+      navigate("/");
     }
   };
 

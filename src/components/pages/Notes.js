@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import axios from "axios";
+import React from "react";
+// import axios from "axios";
 import Container from "@material-ui/core/Container";
 import NoteCard from "../NoteCard";
 import Masonry from "react-masonry-css";
@@ -10,19 +10,19 @@ const breakpointColumnsObj = {
   900: 1,
 };
 
-const Notes = () => {
-  const [notes, setNotes] = useState([]);
+const Notes = ({ notes, setNotes }) => {
+  // const [notes, setNotes] = useState([]);
   const deleteHandler = async (id) => {
-    await axios.delete("http://localhost:3001/notes/" + id);
+    // await axios.delete("http://localhost:3001/notes/" + id);
     const newNotes = notes.filter((note) => note.id !== id);
     setNotes(newNotes);
   };
 
-  useEffect(() => {
-    axios.get("http://localhost:3001/notes").then((res) => {
-      setNotes(res.data);
-    });
-  }, []);
+  // useEffect(() => {
+  //   axios.get("http://localhost:3001/notes").then((res) => {
+  //     setNotes(res.data);
+  //   });
+  // }, []);
 
   return (
     <Container>

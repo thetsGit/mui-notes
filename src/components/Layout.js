@@ -13,6 +13,7 @@ import AppBar from "@material-ui/core/AppBar";
 import { format } from "date-fns";
 import ToolBar from "@material-ui/core/ToolBar";
 import { grey } from "@material-ui/core/colors";
+import harryImage from "../images/harryPotter.jpg";
 
 const drawerWidth = 250;
 const useStyles = makeStyles((theme) => {
@@ -107,7 +108,7 @@ const Layout = ({ children }) => {
               Harry
             </Typography>
             <Avatar
-              src="harryPotter.jpg"
+              src={harryImage}
               alt="harry potter photo"
               style={{ marginLeft: 16 }}
             />
